@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PAN Card Generator</h1>
+        
+        <div class="form-container">
+            <form id="panForm">
+                <div class="form-group">
+                    <label for="name">Full Name (as per records):</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="MALE" checked>
+                        <label for="male">Male</label>
+                        
+                        <input type="radio" id="female" name="gender" value="FEMALE">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="generate-btn">Generate PAN Card</button>
+            </form>
+        </div>
+        
+        <div class="pan-card-container" id="panCardContainer">
+            <!-- PAN Card will be generated here -->
+        </div>
+        
+        <button id="downloadBtn" class="download-btn" disabled>Download PAN Card</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
